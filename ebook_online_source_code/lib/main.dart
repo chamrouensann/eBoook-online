@@ -1,6 +1,7 @@
 import 'package:ebookonlinesourcecode/constants.dart';
 import 'package:flutter/material.dart';
 import 'widgets/rounded_button.dart';
+import 'screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,6 +53,16 @@ class WelcomeScreen extends StatelessWidget {
               child: RoundedButton(
                 text: "Start Reading",
                 fontSize: 20,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HomeScreen();
+                      },
+                    ),
+                  );
+                },
               ),
             )
           ],
