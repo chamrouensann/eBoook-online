@@ -42,8 +42,8 @@ class HomeScreen extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   Positioned(
-                    bottom: 0,
-                    left: 0,
+                    bottom: 10,
+                    left: 15,
                     right: 0,
                     child: Container(
                       height: 221,
@@ -61,6 +61,49 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Image.asset("assets/images/book-1.png"),
+                  Positioned(
+                    top: 35,
+                    right: 0,
+                    child: Column(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.favorite_border),
+                          onPressed: () {},
+                        ),
+                        Container(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: Offset(3, 7),
+                                  blurRadius: 20,
+                                  color: Color(0xFD3D3D3).withOpacity(.5),
+                                )
+                              ]),
+                          child: Column(
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: kIconColor,
+                                size: 15,
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                "4.9",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             )
