@@ -1,5 +1,6 @@
 import 'package:ebookonlinesourcecode/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:ebookonlinesourcecode/widgets/book_rating.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -37,13 +38,13 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Container(
-              height: 245,
-              width: 202,
+              height: 240,
+              width: 210,
               child: Stack(
                 children: <Widget>[
                   Positioned(
                     bottom: 10,
-                    left: 15,
+                    left: 10,
                     right: 0,
                     child: Container(
                       height: 221,
@@ -70,38 +71,25 @@ class HomeScreen extends StatelessWidget {
                           icon: Icon(Icons.favorite_border),
                           onPressed: () {},
                         ),
-                        Container(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 8, horizontal: 6),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  offset: Offset(3, 7),
-                                  blurRadius: 20,
-                                  color: Color(0xFD3D3D3).withOpacity(.5),
-                                )
-                              ]),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: kIconColor,
-                                size: 15,
-                              ),
-                              SizedBox(height: 5),
-                              Text(
-                                "4.9",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              )
-                            ],
-                          ),
+                        BookRating(
+                          score: 3.9,
+                        ),
+                        BookRating(
+                          score: 3.9,
                         ),
                       ],
+                    ),
+                  ),
+                  Positioned(
+                    top: 200,
+                    child: Container(
+                      height: 85,
+                      width: 202,
+                      child: Column(
+                        children: <Widget>[
+                          RichText(),
+                        ],
+                      ),
                     ),
                   )
                 ],
