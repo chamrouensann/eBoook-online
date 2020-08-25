@@ -74,9 +74,6 @@ class HomeScreen extends StatelessWidget {
                         BookRating(
                           score: 3.9,
                         ),
-                        BookRating(
-                          score: 3.9,
-                        ),
                       ],
                     ),
                   ),
@@ -86,8 +83,27 @@ class HomeScreen extends StatelessWidget {
                       height: 85,
                       width: 202,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          RichText(),
+                          Padding(
+                            padding: EdgeInsets.only(left: 24),
+                            child: RichText(
+                              text: TextSpan(
+                                style: TextStyle(color: kBlackColor),
+                                children: [
+                                  TextSpan(
+                                    text: "Crushing & Influence\n",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                    text: "Rouen Pro",
+                                    style: TextStyle(color: kLightBlackColor),
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ),
