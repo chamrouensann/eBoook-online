@@ -36,9 +36,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 10),
             Container(
-              height: 240,
+              height: 300,
               width: 210,
               child: Stack(
                 children: <Widget>[
@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Image.asset("assets/images/book-1.png"),
                   Positioned(
-                    top: 35,
+                    top: 75,
                     right: 0,
                     child: Column(
                       children: <Widget>[
@@ -103,6 +103,26 @@ class HomeScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                width: 101,
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                alignment: Alignment.center,
+                                child: Text("Details"),
+                              ),
+                              Expanded(
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  padding: EdgeInsets.symmetric(vertical: 10),
+                                  decoration: BoxDecoration(
+                                    color: kBlackColor,
+                                  ),
+                                  child: Text("Read"),
+                                ),
+                              )
+                            ],
                           )
                         ],
                       ),
