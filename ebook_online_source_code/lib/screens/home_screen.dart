@@ -76,6 +76,48 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  RichText(
+                    text: TextSpan(
+                        style: Theme.of(context).textTheme.display1,
+                        children: [
+                          TextSpan(text: "Best of the "),
+                          TextSpan(
+                            text: "Day",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          )
+                        ]),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    width: double.infinity,
+                    height: 205,
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned(
+                          child: Container(
+                            height: 185,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFEAEAEA).withOpacity(.45),
+                              borderRadius: BorderRadius.circular(19),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 0,
+                          child: Image.asset("assets/images/book-3.png"),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
