@@ -100,17 +100,65 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         Positioned(
                           child: Container(
+                            padding: EdgeInsets.only(
+                                left: 24, top: 50, right: size.width * .35),
                             height: 185,
                             width: double.infinity,
                             decoration: BoxDecoration(
                               color: Color(0xFFEAEAEA).withOpacity(.45),
                               borderRadius: BorderRadius.circular(19),
                             ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "The best book in Cambodia for the first 11 March 2020. I really love the book.",
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    color: kLightBlackColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "How to win friend & Influence people",
+                                  style: Theme.of(context).textTheme.title,
+                                ),
+                                Text(
+                                  "Gary Vanchuk",
+                                  style: TextStyle(
+                                    color: kLightBlackColor,
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                                Row(
+                                  children: <Widget>[
+                                    BookRating(score: 4.6),
+                                    SizedBox(width: 10),
+                                    Expanded(
+                                      child: Text(
+                                        "When I read this book, I feel like this book is very good for student to study and mental break down, So please don't give up of the life during this COVID-19. I know I love you more than I like you.",
+                                        maxLines: 3,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: kLightBlackColor,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Positioned(
                           right: 0,
-                          child: Image.asset("assets/images/book-3.png"),
+                          child: Image.asset(
+                            "assets/images/book-3.png",
+                            width: size.width * .27,
+                          ),
                         )
                       ],
                     ),
