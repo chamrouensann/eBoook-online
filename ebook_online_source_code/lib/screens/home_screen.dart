@@ -99,6 +99,9 @@ class HomeScreen extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Positioned(
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
                           child: Container(
                             padding: EdgeInsets.only(
                                 left: 24, top: 50, right: size.width * .35),
@@ -157,7 +160,18 @@ class HomeScreen extends StatelessWidget {
                           right: 0,
                           child: Image.asset(
                             "assets/images/book-3.png",
-                            width: size.width * .27,
+                            width: size.width * .20,
+                          ),
+                        ),
+                        Positioned(
+                          right: 0,
+                          bottom: 0,
+                          child: SizedBox(
+                            height: 40,
+                            width: size.width * .3,
+                            child: TwoSideRoundedButton(
+                              text: "Reading",
+                            ),
                           ),
                         )
                       ],
