@@ -124,10 +124,70 @@ class HomeScreen extends StatelessWidget {
                               )
                             ],
                           ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(38.5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.only(left: 30, right: 20),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Expanded(
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Text(
+                                                "Crushing and Influence",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text(
+                                                "Gary Venchuk",
+                                                style: TextStyle(
+                                                  color: kLightBlackColor,
+                                                ),
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomRight,
+                                                child: Text("Chapter 7 of 128",
+                                                    style: TextStyle(
+                                                      fontSize: 10,
+                                                      color: kLightBlackColor,
+                                                    )),
+                                              ),
+                                              SizedBox(height: 5),
+                                            ],
+                                          ),
+                                        ),
+                                        Image.asset(
+                                          "assets/images/book-1.png",
+                                          width: 55,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  height: 7,
+                                  width: size.height * .65,
+                                  decoration: BoxDecoration(
+                                    color: kProgressIndicator,
+                                    borderRadius: BorderRadius.circular(7),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
                         ),
-                        SizedBox(
-                          height: 80,
-                        )
+                        SizedBox(height: 80),
                       ],
                     ),
                   )
