@@ -1,4 +1,5 @@
 import 'package:ebookonlinesourcecode/constants.dart';
+import 'package:ebookonlinesourcecode/screens/details_screen.dart';
 import 'package:ebookonlinesourcecode/widgets/reading_cart_list.dart';
 import 'package:ebookonlinesourcecode/widgets/two_side_rounded_button.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,17 @@ class HomeScreen extends StatelessWidget {
                           image: "assets/images/book-1.png",
                           title: "Crushing & Influence",
                           auth: "Rouen Pro",
-                          rating: 4.7,
+                          rating: 5.0,
+                          pressDetails: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return DetailsScreen();
+                                },
+                              ),
+                            );
+                          },
                         ),
                         ReadingListCard(
                           image: "assets/images/book-2.png",
