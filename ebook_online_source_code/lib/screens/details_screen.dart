@@ -1,4 +1,6 @@
+import 'package:ebookonlinesourcecode/constants.dart';
 import 'package:ebookonlinesourcecode/widgets/book_rating.dart';
+import 'package:ebookonlinesourcecode/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -50,7 +52,21 @@ class DetailsScreen extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Column(
-                                          children: <Widget>[],
+                                          children: <Widget>[
+                                            Text(
+                                              "August has a special hold on those of us who are incurable romantics. Somewhere between daydreaming in the sun and gazing at the Perseid meteor shower at night, we chase the last glimpse of summer in swoon-worthy romance novels. August has a special hold on those of us who are incurable romantics. Somewhere between daydreaming in the sun and gazing at the Perseid meteor shower at night, we chase the last glimpse of summer in swoon-worthy romance novels.August has a special hold on those of us who are incurable romantics. Somewhere between daydreaming in the sun and gazing at the Perseid meteor shower at night, we chase the last glimpse of summer in swoon-worthy romance novels.",
+                                              maxLines: 6,
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: kLightBlackColor,
+                                              ),
+                                            ),
+                                            SizedBox(height: 5),
+                                            RoundedButton(
+                                              text: "Read More",
+                                              verticalPadding: 12,
+                                            )
+                                          ],
                                         ),
                                       ),
                                       Column(
