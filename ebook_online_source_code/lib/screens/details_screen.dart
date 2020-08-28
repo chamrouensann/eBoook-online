@@ -1,3 +1,4 @@
+import 'package:ebookonlinesourcecode/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -17,6 +18,62 @@ class DetailsScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/images/bg.png"),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(50),
+                      bottomRight: Radius.circular(50),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: size.height * .1),
+                        Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Column(
+                                children: <Widget>[
+                                  Text(
+                                    "Crushing &",
+                                    style: Theme.of(context).textTheme.display1,
+                                  ),
+                                  Text(
+                                    "Influence",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .display1
+                                        .copyWith(fontWeight: FontWeight.bold),
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        child: Column(
+                                          children: <Widget>[],
+                                        ),
+                                      ),
+                                      Column(
+                                        children: <Widget>[
+                                          IconButton(
+                                            icon: Icon(Icons.favorite_border),
+                                            onPressed: () {},
+                                          ),
+                                          BookRating(score: 5.0),
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                            Image.asset(
+                              "assets/images/book-1.png",
+                              height: 200,
+                            )
+                          ],
+                        )
+                      ],
                     ),
                   ),
                 ),
